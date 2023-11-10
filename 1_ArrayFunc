@@ -1,7 +1,7 @@
 #include <iostream>
 #include <iomanip>
 #include <limits>
-
+// реализуйте функционал в виде функций
 int sum_of_array (const int n, const int arr[])
 {
     int s = 0;
