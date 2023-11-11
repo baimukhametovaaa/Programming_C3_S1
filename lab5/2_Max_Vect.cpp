@@ -2,7 +2,7 @@
 
 int* max_vect(int kc,  const int a[], const int b[])
 {
-    int* res = new int[kc]; // создание динамического массива
+    int* res = new int[kc]; // создание массива
 
     for (int i = 0;i < kc; i++) // заполнение массива
     {
