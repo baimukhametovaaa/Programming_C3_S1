@@ -2,6 +2,8 @@
 #include <iomanip>
 #include <limits>
 // реализуйте функционал в виде функций
+
+// сумма всех элементов
 int sum_of_array (const int n, const int arr[])
 {
     int s = 0;
@@ -12,6 +14,7 @@ int sum_of_array (const int n, const int arr[])
     return s;
 }
 
+// среднее арифметическое
 double average_of_array (const int n, const int arr[])
 {
     double s = 0;
@@ -22,6 +25,7 @@ double average_of_array (const int n, const int arr[])
     return s/n;
 }
 
+// сумма отрицательных
 int sum_of_neg (const int n, const int arr[])
 {
     int s = 0;
@@ -35,6 +39,7 @@ int sum_of_neg (const int n, const int arr[])
     return s;
 }
 
+// сумма положительных
 int sum_of_pos (const int n, const int arr[])
 {
     int s = 0;
@@ -48,6 +53,7 @@ int sum_of_pos (const int n, const int arr[])
     return s;
 }
 
+// сумма с четным индексом
 int sum_of_even (const int n, const int arr[])
 {
     int s = 0;
@@ -61,6 +67,7 @@ int sum_of_even (const int n, const int arr[])
     return s;
 }
 
+// сумма с нечетным индексом
 int sum_of_odd (const int n, const int arr[])
 {
     int s = 0;
@@ -74,6 +81,7 @@ int sum_of_odd (const int n, const int arr[])
     return s;
 }
 
+// индекс минимального
 int min_elem (const int n, const int arr[])
 {
     double min_elem = std::numeric_limits<double>::infinity();
@@ -90,6 +98,7 @@ int min_elem (const int n, const int arr[])
 }
 
 
+// индекс максимального
 int max_elem (const int n, const int arr[])
 {
     double max_elem = std::numeric_limits<double>::infinity();
@@ -107,7 +116,7 @@ int max_elem (const int n, const int arr[])
 }
 
 
-
+// произведение элементов между мин и макс
 int min_max_product (const int n, const int arr[])
 {
     double min_elem = std::numeric_limits<double>::infinity();
@@ -148,7 +157,7 @@ int min_max_product (const int n, const int arr[])
 }
 
 int main() {
-    const int n = 10; // узнать что такое константа
+    const int n = 10;
     int mas[n];
     for (int i=0; i<n; i++)
     {
