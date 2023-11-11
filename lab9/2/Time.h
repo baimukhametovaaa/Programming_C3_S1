@@ -3,7 +3,14 @@
 class Time {
 public:
     // исключение - ввод неправильного времени
-    void time_validation();
+    class TimeException
+    {
+    public:
+        TimeException(std::string message): message{message}{}
+        std::string get_message() const {return message;}
+    private:
+        std::string message;
+    };
 
     // конструктор со значениями
     Time(int, int, int);
@@ -21,12 +28,6 @@ private:
     int hour;
     int minute;
     int second;
-
-    // константы для задания времени
-    const int sec;
-    const int min;
-    const int h;
-
 };
 
 
