@@ -1,1 +1,42 @@
+#include <iostream>
+#include <map>
+#include <string>
 
+struct StudentGrade {
+    std::string name;
+    char grade;
+};
+
+class ClassRegister {
+private:
+    std::map<std::string, StudentGrade> class_register;
+
+public:
+    // функция для добавления оценки студенту по имени
+    void assign_grade(const std::string& name, char grade) {
+        class_register[name] = StudentGrade{name, grade};
+    }
+
+    // функция для вывода оценки студента по имени
+    void displayGrade(const std::string& name) {
+        auto it = class_register.find(name);
+        if (it != class_register.end()) {
+            std::cout << "Student " << name << "'s grades: " << it->second.grade << std::endl;
+        } else {
+            std::cout << "Student " << name << " is not found" << std::endl;
+        }
+    }
+};
+
+int main() {
+    ClassRegister classregister;
+    classregister.assign_grade("Bob", 'A');
+    classregister.assign_grade("Sam", 'B');
+    classregister.assign_grade("Kate", 'C');
+
+    classregister.displayGrade("Bob");
+    classregister.displayGrade("Sam");
+    classregister.displayGrade("Ann");
+
+    return 0;
+}
